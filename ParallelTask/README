@@ -1,0 +1,22 @@
+To build:
+    ant
+
+To run:
+    java <jvmargs> -jar jars/paralleltask.jar nThreads nDoubles mode \
+                        balanced [size]
+        nThreads - Size of the executor or fork/join pool
+	nDoubles - Size of the double array
+	mode - 0 for thread pool, 1 for fork/join pool
+	unbalanced - false for the balanced test; true for the unbalanced test
+	size - optional, size at which to switch from recursive fork/join
+	       tasks to simple array counting (default 10)
+
+Example 9-4:
+    java -Xmx4g -Xms4g -jar jars/paralleltask.jar 1_or_4 100000000 0_or_1 false
+
+Example 9-5:
+    java -Xmx4g -Xms4g -jar jars/paralleltask.jar 1_or_4 10000 0_or_1 true
+
+Example 9-6:
+    java -Xmx4g -Xms4g -jar jars/paralleltask.jar 1_or_4 100000000 \
+        0_or_1 false desired_size

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<project name="JNI" default="jar">
+
+    <target name="init">
+	<mkdir dir="classes"/>
+	<mkdir dir="jars"/>
+	<mkdir dir="src/h"/>
+    </target>
+
+    <target name="compile" depends="init">
+	<property environment="env"/>
+	<javac includeantruntime="false" srcdir="src/java"
+	       debug="true" destdir="classes">
+	</javac>
+    </target>
+
+    <target name="jar" depends="compile">
+	<jar jarfile="jars/random.jar">
+	    <manifest>
+	        <attribute name="Main-Class" value="net.sdo.RandomTestJava"/>
+	    </manifest>
+	    <fileset dir="classes" includes="**/*.class"/>
+	</jar>
+        <javah classpath="jars/random.jar" destdir="src/h" class="net.sdo.RandomTestJava"/>
+    </target>
+
+    <target name="clean">
+        <delete>
+	    <fileset dir="classes"/>
+	    <fileset dir="jars"/>
+	    <fileset dir="bin"/>
+	    <fileset dir="lib"/>
+	    <fileset dir="src/h"/>
+        </delete>
+    </target>
+</project>

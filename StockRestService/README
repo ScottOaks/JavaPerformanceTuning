@@ -1,0 +1,31 @@
+To build:
+    Building this requires a JavaEE application server that supplies
+    servlet, JPA, and EJB interfaces.
+    You must set the following environment variables:
+    JAVAX_PERSISTENCE=/path_to/javax.persistence.jar
+    JAVAX_RS=/path_to/javax.ws.rs-api.jar
+    JSON_P=/path_to/javax.json.jar
+
+To deploy:
+    Set up and configure a JavaEE application server. Even if you
+    intend only to use the mock entity manager, the application server must
+    define a JDBC data source with the name StockDB.
+
+    Deploy to any JavaEE application server.  For a simple deployment with
+    glassfish, copy the jars/StockEar.ear to the glassfish domain's
+    autodeploy directory.
+
+    If you want to use the mock entity manager, configure the app server
+    to use
+    -DMockEntityManager=MockEntityManager
+    as one of its JVM parameters (along with whatever parameters you are
+    interested in testing)
+
+    You must have a REST client to test this with. One simple way to
+    do that is to use NetBean to generate a dummy Rest Client to access
+    the service.
+
+    For load testing, fhb cannot generate the required tests, but a faban
+    driver (used for the examples) is found in StockRestDriver. Or utilize
+    any load generator to generate rest calls to
+    http://localhost:8080/StockPriceRestService/webresources/StockPrice?mode=1&startDate=01%2F01%2F2013&endDate=12%2F31%2F2017&cache=true&symbol=<SYMBOL>

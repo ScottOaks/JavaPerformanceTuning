@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<project name="StockRestTests" default="driver">
+    <property environment="env"/>
+
+    <target name="init">
+	<mkdir dir="classes"/>
+	<mkdir dir="jars"/>
+    </target>
+
+    <target name="driver" depends="init">
+        <javac includeantruntime="false" srcdir="src" debug="true"
+	    destdir="classes">
+            <classpath>
+                <pathelement location="${env.FABAN_DRIVER}"/>
+            </classpath>
+        </javac>
+	<jar jarfile="jars/driver.jar">
+	    <fileset dir="classes" includes="**/*.class"/>
+	</jar>
+    </target>
+
+    <target name="clean">
+	<delete>
+	    <fileset dir="classes"/>
+	    <fileset dir="jars"/>
+	</delete>
+    </target>
+</project>
+

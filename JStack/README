@@ -1,0 +1,7 @@
+To build:
+    ant
+
+To run:
+    java -jar jars/ParseJStack.jar [-name name] file1 ...
+        -name -- Restrict to threads that contain the given string in their name
+	file1 ... fileN -- Files of jstack output to parse

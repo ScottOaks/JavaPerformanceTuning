@@ -1,0 +1,16 @@
+To build:
+    For the java code, 
+    ant
+
+    The C library is set up to build on Linux using gcc
+    make library
+
+    The C executable is set up to build on Linux using gcc
+    make
+
+To run:
+    java -DLIBPATH=lib -jar jars/random.jar 10000 100000
+    yields the first for lines in Example 12-4
+
+    env LD_LIBRARY_PATH=lib bin/randtest 10000 100000
+    yields the C only value

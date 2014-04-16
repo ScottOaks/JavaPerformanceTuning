@@ -1,0 +1,11 @@
+To build:
+    This example uses a public domain version of the ConcurrentHashMap
+    that provides for weak (and other types of) references. That source
+    is included; see src/extra166y/CustomConcurrentHashMap.java for
+    license details.
+
+To run:
+    java <jvmargs> -jar jars/stringintern.jar self|jdk
+    jdk -- use the standard string intern call in the jdk (tested with
+           various StringTableSize arguments)
+    self -- use a custom cannonical string representation

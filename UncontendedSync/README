@@ -1,0 +1,5 @@
+To build:
+    ant
+
+To run:
+    java <jvmargs> -jar jars/uncontended.jar

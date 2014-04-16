@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<project name="ParsingTest" default="jar">
+    <property environment="env"/>
+
+    <target name="init">
+	<mkdir dir="classes"/>
+    </target>
+
+    <target name="compile" depends="init">
+	<javac includeantruntime="false" srcdir="src"
+	       debug="true" destdir="classes">
+	    <classpath>
+	        <pathelement location="${env.SIZEOF}"/>
+	        <pathelement location="${env.JSON_P}"/>
+	        <pathelement location="${env.JACKSON}"/>
+	    </classpath>
+	</javac>
+    </target>
+
+    <target name="jar" depends="compile">
+        <jar jarfile="jars/ParsingTest.jar">
+	    <manifest>
+		<attribute name="Main-Class" value="net.sdo.ParsingTest"/>
+	    </manifest>
+	    <fileset dir="classes" includes="**/*.class"/>
+	</jar>
+    </target>
+
+    <target name="clean">
+        <delete>
+	  <fileset dir="classes"/>
+	  <fileset dir="jars"/>
+	</delete>
+    </target>
+</project>

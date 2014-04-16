@@ -1,0 +1,61 @@
+To build:
+    Although this is a JDBC app, it still requires JPA -- the mock
+    entity manager is used to create the dummy data which is then
+    inserted into the database via JDBC. In your environment, set
+    JAVAX_PERSISTENCE=path_to/javax.persistence.jar
+
+    Statement caching in JDBC is driver dependent. The sample application
+    includes commands to set the Oracle JDBC driver to perform
+    statement caching, and hence requires you to set this environment:
+    JDBC_JAR=/path_to/ojdbc6.jar
+
+    If you are using a different database, you will have to edit the
+    sample application and remove the statement caching calls to the
+    Oracle JDBC driver (and, depending on your database, replace them
+    with alternate calls).
+
+    In any case, you will need to set JDBC_JAR to the JDBC driver you
+    are using so that it can be found at runtime.
+
+To run:
+    Running this requires a database and JDBC driver. The example
+    does not set up the schema for the database, so before running
+    the test (each time), you must use the stock.sql file to drop and
+    create the schema for your database. [The sample syntax is for Oracle
+    XE; other databases may need to tweak the schema.][
+
+    java <jvmargs> -jar jars/StockCreateJDBC.jar \
+        jdbc_url dbuser dbpassword nThreads nStocks \
+        startDate endDate autocommit nTransactions batch
+
+    where 
+    jdbc_url -- the JDBC URL for your database
+    dbuser -- user to log in as
+    dbpassword -- password to log in with
+    nThreads -- Number of threads to use to populate in parallel
+    nStocks -- Number of stock symbols to generate
+    startDate -- Starting date for range
+    endDate -- Ending date for range
+    autocommit -- true or false to set/unset autocommit
+    nTransactions -- number of transactions in a commit or batch. This
+        affects both autocommit and batching -- if autocommit is false,
+	commit will be called after each nTrasaction inserts. If batching
+	is true, the batch will be sent when its size is nTransactions.
+    batch -- wheter or not batching is enabled
+
+Notes on Examples:
+
+Example 11-1:
+    The sample database is created with this command line (assuming Oracle
+    XE is installed on your local machine):
+
+    java -jar jars/StockCreateJDBC.jar jdbc:oracle:thin:@localhost:1521:XE \
+        stock stock 1 128 1/1/13 12/1/13 false 1000000 true
+
+    Those last three parameters control the lines in the table:
+    Autocommit; no batching: true 1000000 false
+    1 commit/stock: false 1 false
+    1 commit/all: false 1000000 false
+    1 batch/commit/stock: true 1 true
+    1 batch/commit: false 1 true
+    1 batch/commit: false 1000000 true

@@ -1,0 +1,26 @@
+To build:
+    ant
+
+To run:
+    java <jvmargs> -jar jars/classloading.jar jarfile nThreads useLargeStack
+
+    jarfile -- All classes from this jar file will be loaded in the customer
+        class loader
+    nThreads -- Number of threads to execute simultaneously
+    useLargeStack -- If true, then the lookup will be performed from a
+        call stack of 40 entries
+
+    In general, the examples leverage the modules from glassfish, but any
+    large set of jar files and classes can be used.
+
+Notes on Examples:
+
+Example 12-2
+    java -jar jars/classloading.jar /path_to/guava.jar N false
+    where N varies from 1 to 8
+
+Example 12-3
+    java -jar jars/classloading.jar /path_to/guava.jar N false
+    where N varies from 1 to 8
+    and where the CLASSPATH contains all jar files from glassfish
+    (266 entries)

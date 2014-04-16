@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<project name="StockAPI" default="jar">
+
+    <target name="init">
+	<mkdir dir="classes"/>
+	<mkdir dir="jars"/>
+    </target>
+
+    <target name="compile" depends="init">
+	<property environment="env"/>
+	<javac includeantruntime="false" srcdir="src"
+	       debug="true" destdir="classes">
+	</javac>
+    </target>
+
+    <target name="jar" depends="compile">
+	<jar jarfile="jars/stockapi.jar">
+	    <fileset dir="classes" includes="**/*.class"/>
+	</jar>
+    </target>
+
+    <target name="clean">
+        <delete>
+	    <fileset dir="classes"/>
+	    <fileset dir="jars"/>
+        </delete>
+    </target>
+</project>

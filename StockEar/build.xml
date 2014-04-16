@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<project name="StockEar" default="ear">
+    <property name="stock_api" location="../api/jars/stockapi.jar"/>
+    <property name="stock_impl" location="../impl/jars/stockimpl.jar"/>
+    <property name="impl" value="EagerLazyImpl"/>
+
+    <target name="build-deps">
+	<ant dir="StockEar-war" target="war"/>
+    </target>
+
+    <target name="ear" depends="build-deps">
+        <jar jarfile="jars/StockEar.ear">
+	    <fileset dir="StockEar-ejb/jars" includes="**"/>
+	    <fileset dir="StockEar-war/jars" includes="**"/>
+	    <zipfileset dir="../api/jars" includes="stockapi.jar"
+	             fullpath="lib/stockapi.jar"/>
+	    <zipfileset dir="../impl/jars" includes="stockimpl.jar"
+	             fullpath="lib/stockimpl.jar"/>
+        </jar>
+    </target>
+
+    <target name="clean">
+        <delete>
+          <fileset dir="jars"/>
+        </delete>
+	<ant dir="StockEar-war" target="clean"/>
+    </target>
+</project>

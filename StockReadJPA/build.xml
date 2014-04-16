@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<project name="StockReadJPA" default="jar">
+    <property environment="env"/>
+    <property name="stock_api" location="../api/jars/stockapi.jar"/>
+    <property name="stock_impl" location="../impl/jars/stockimpl-all.jar"/>
+
+    <target name="init">
+	<mkdir dir="classes"/>
+	<mkdir dir="jars"/>
+	<mkdir dir="jars/lib"/>
+    </target>
+
+    <path id="class.path">
+        <pathelement path="${stock_api}"/>
+        <pathelement path="${stock_impl}"/>
+	<pathelement location="${env.JAVAX_PERSISTENCE}"/>
+	<pathelement location="${env.ECLIPSELINK_JAR}"/>
+    </path>
+
+    <target name="build-deps">
+        <ant dir="../api" target="jar"/>
+        <ant dir="../impl" target="jar-all"/>
+    </target>
+
+    <target name="compile" depends="init,build-deps">
+	<javac includeantruntime="false" srcdir="src"
+	       debug="true" destdir="classes"
+	       classpathref="class.path"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <jar jarfile="jars/StockReadJPA.jar">
+	    <manifest>
+		<attribute name="Class-Path"
+		  value="${env.JAVAX_PERSISTENCE} ${env.ECLIPSELINK_RUNTIME} ${env.JDBC_JAR} lib/stockapi.jar lib/stockimpl-all.jar"/>
+		<attribute name="Main-Class" value="net.sdo.StockPriceReadJPA"/>
+	    </manifest>
+	    <fileset dir="classes" includes="**/*.class"/>
+	    <fileset dir="." includes="META-INF/persistence.xml"/>
+	</jar>
+	<copy file="${stock_api}" todir="jars/lib"/>
+	<copy file="${stock_impl}" todir="jars/lib"/>
+    </target>
+
+    <target name="clean">
+        <delete>
+	  <fileset dir="classes"/>
+	  <fileset dir="jars"/>
+	</delete>
+    </target>
+</project>

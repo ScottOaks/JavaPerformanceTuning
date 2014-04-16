@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<project name="StockRestService" default="war">
+    <property environment="env"/>
+    <property name="stock_api" location="../api/jars/stockapi.jar"/>
+    <property name="stock_impl" location="../impl/jars/stockimpl.jar"/>
+
+    <target name="init">
+        <mkdir dir="classes"/>
+    </target>
+
+    <path id="class.path">
+        <pathelement path="${stock_api}"/>
+        <pathelement path="${stock_impl}"/>
+	<pathelement location="${env.JAVAX_PERSISTENCE}"/>
+	<pathelement location="${env.JAVAX_RS}"/>
+	<pathelement location="${env.JSON_P}"/>
+    </path>
+
+    <target name="compile" depends="init">
+        <javac includeantruntime="false" srcdir="src"
+               debug="true" destdir="classes"
+               classpathref="class.path"/>
+    </target>
+
+    <target name="war" depends="compile">
+        <war warfile="jars/StockPriceRestService.war" needxmlfile="false">
+            <manifest>
+            </manifest>
+            <classes dir="classes" includes="**/*.class"/>
+ 		<zipfileset dir="../api/jars" includes="stockapi.jar"
+	             fullpath="WEB-INF/lib/stockapi.jar"/>
+	    	<zipfileset dir="../impl/jars" includes="stockimpl.jar"
+	             fullpath="WEB-INF/lib/stockimpl.jar"/>
+        </war>
+    </target>
+
+    <target name="clean">
+        <delete>
+          <fileset dir="classes"/>
+          <fileset dir="jars"/>
+        </delete>
+    </target>
+</project>

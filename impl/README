@@ -1,0 +1,21 @@
+These classes provide various implementations of the StockPrice API.
+
+To compile these classes, you must have a JPA implementation. In your
+environment, please set JAVAX_PERSISTENCE to the path to the jar file
+containing the JPA API classes, e.g.
+export JAVA_PERSISTENCE=/path_to/javax.persistence.jar
+
+For examples that require Eclipselink-specific functionality, set
+ECLIPSELINK_JAR to the path of the eclipselink implementation, e.g.
+export ECLIPSELINK_JAR=/path_to/eclipselink.jar
+
+There are several implementations of the stock price API, discussed mostly
+in Chapter 11, as the implementation differences affect JPA. The choice of
+those implementations is selected via -Dimpl value passed to the ant
+comandline:
+    -Dimpl=LazyLazyImpl (both relationships are annotated lazy)
+    -Dimpl=EagerLazyImpl (the OneToMany stock->options relationship is eager)
+    -Dimpl=EagerEagerImpl (both relationships are eager)
+    -Dimpl=LazyEagerImpl (the ManyToOne options->stock relationship is eager)
+For tests with the mock entity manager, use LazyLazyImpl, which is the
+default.

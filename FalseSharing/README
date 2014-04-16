@@ -1,0 +1,9 @@
+To build:
+    ant
+
+To run:
+    java <jvmargs> -jar jars/falsesharing.jar nLoops
+        nLoops -- number of loops to run (e.g., 1,000,000,000)
+	nThreads -- number of threads to use
+
+Example 9-8: Note that the results are from a size of 1 billion, not 1 million

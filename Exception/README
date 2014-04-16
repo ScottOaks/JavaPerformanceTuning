@@ -1,0 +1,11 @@
+To build:
+    ant
+
+To run:
+    java <jvmargs> -jar jars/exception.jar numLoops pctExceptions
+
+Example 12-5:
+    Run with 1000000 100
+
+Example 12-6:
+    Run with 1000000 1

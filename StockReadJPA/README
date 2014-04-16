@@ -1,0 +1,81 @@
+To build:
+    This is a standalone (Java SE) application for JPA.
+    In your environment, set
+    JAVAX_PERSISTENCE=path_to/javax.persistence.jar
+
+    The META-INF/persistence.xml file contains information that JPA will
+    use for the database connection. Edit it for the appropriate values for
+    your database. That file is based on the eclipselink JPA reference
+    implementation; it will need other changes for Hibernate or other
+    JPA implementations (chaging the provider class and eclipselink
+    property names). Note that there are four persistence units, one for
+    each combination of Eager/Lazy relationships between stock and 
+    stockoptions (EagerLazy -- the default, EagerEager, LazyEager,
+    and LazyLazy).
+
+    Although the example doesn't use JDBC directly, you will need the
+    appropriate JDBC driver to compile the application (so that the
+    driver gets set into the classpath). In your environment, set
+    JDBC_JAR=/path_to/ojdbc6.jar
+    (or whichever driver you are using).
+
+To run:
+    Load the database using either StockCreateJDBC or StockCreateJPA.
+
+    Running a Java SE program with JPA requires that the JPA classes be
+    "enhanced". Eclipselink does this at run time using the javaagent
+    argument. Other implementations may require that the jar file be
+    pre-processed; check your provider documentation to see if that is
+    required.
+
+    java <jvmargs> -javaagent:${ECLIPSELINK_JAR} -jar jars/StockReadJPA.jar \
+        [-b true|false] [-p true|false] [-e true|false] [-l true|false] \
+	[-j true|false] [-s true|false] [-q true|false]
+
+    -b: Batch all reads (Sets eclipselink fetch size hint -- requires code
+          changes for other providers)
+    -p: processOptions (default true)
+    -e: Use Eager fetching for StockOptions -> Stock (default false)
+    -l: Use Lazy fetching for Stock -> StockOptions (default false)
+    -j: Use JOIN FETCH query(default false)
+    -s: Load stocks via em.find() rather than a query
+    -q: Use EclipseLink query cache (default false)
+
+    Use a large heap (-Xmx4g -Xms4g) to support the L2 cache
+
+Notes on Examples:
+
+Example 11-3:
+    Lazy relationship:
+        java <jvmargs> -javaagent:${ECLIPSELINK_JAR} \
+	    -jar jars/StockReadJPA.jar -l true -p true
+    Lazy relationship no traversal:
+        java <jvmargs> -javaagent:${ECLIPSELINK_JAR} \
+	    -jar jars/StockReadJPA.jar -l true -p false
+
+Example 11-4:
+    Eager relationship:
+        java <jvmargs> -javaagent:${ECLIPSELINK_JAR} \
+	    -jar jars/StockReadJPA.jar -l false -p true
+    Eager relationship, no traversal:
+        java <jvmargs> -javaagent:${ECLIPSELINK_JAR} \
+	    -jar jars/StockReadJPA.jar -l false -p false
+
+Example 11-5: 
+    Default Configuration:
+        java <jvmargs> -javaagent:${ECLIPSELINK_JAR} \
+	    -jar jars/StockReadJPA.jar
+    Join Fetch:
+        java <jvmargs> -javaagent:${ECLIPSELINK_JAR} \
+	    -jar jars/StockReadJPA.jar -j true
+    Join Fetch with Query Cache:
+        java <jvmargs> -javaagent:${ECLIPSELINK_JAR} \
+	    -jar jars/StockReadJPA.jar -j true -q true
+
+Example 11-6:
+    Default Configuration:
+        java <jvmargs> -javaagent:${ECLIPSELINK_JAR} \
+	    -jar jars/StockReadJPA.jar
+   No Query:
+        java <jvmargs> -javaagent:${ECLIPSELINK_JAR} \
+	    -jar jars/StockReadJPA.jar -s true

@@ -1,0 +1,104 @@
+To build:
+    Building this requires a JavaEE application server that supplies
+    servlet, JPA, and EJB interfaces.
+    You must set the following environment variables:
+    JAVAX_PERSISTENCE=/path_to/javax.persistence.jar
+    JAVAX_EJB=/path_to/javax.ejb-api.jar
+    JAVAX_SERVLET=/path_to/javax.servlet-api.jar
+
+To deploy:
+    Set up and configure a JavaEE application server. Even if you
+    intend only to use the mock entity manager, the application server must
+    define a JDBC data source with the name StockDB.
+
+    Deploy to any JavaEE application server.  For a simple deployment with
+    glassfish, copy the jars/StockEar.ear to the glassfish domain's
+    autodeploy directory.
+
+    If you want to use the mock entity manager, configure the app server
+    to use
+    -DMockEntityManager=MockEntityManager
+    as one of its JVM parameters (along with whatever parameters you are
+    interested in testing)
+
+Notes on Examples:
+
+Example 4-3
+    Deploy the ear file with the mock entity manager enabled, and then use
+    your favorite load generating tool to send requests to
+    http://host:port/StockEar-war/StockServlet
+
+    For fhb, the following parameters were used:
+    0 second warmup: -r 0/60/10 -c 1 -J-Dfhb.http.provider=sun url
+    60 second warmup: -r 60/60/10 -c 1 -J-Dfhb.http.provider=sun url
+    300 second warmup: -r 300/60/10 -c 1 -J-Dfhb.http.provider=sun url
+
+Example 5-2
+    Deploy the ear file with the mock entity manager enabled, and then use
+    your favorite load generating tool to send requests to (e.g., to save
+    the previous 10 entries)
+    http://host:port/StockEar-war/StockServlet?save=10
+
+    Make sure that the application server is configured with the appropriate
+    GC parameters and has at least 4 threads in the default thread pool. Also
+    make sure that the load generator establishes a session for each client
+    thread and maintains it through the test (fhb will do that automatically).
+
+Example 5-3
+    As in Example 5-2, with varying numbers for the save parameter. The
+    difference here is that the client threads in the load generator should
+    be set to have a 250ms delay between requests. With fhb, that is
+    achieved by including -W 250 in the command line.
+
+Example 6-1 and 6-2
+    Configure as for the examples in Chapter 5. In 6-1, no save parameter
+    is given in the URL; in 6-2, save=50 is specified in the parameter.
+    Configure the application server to have different heap sizes and
+    different values for MaxGCPauseMillis and/or MaxGCRatio.
+
+Example 9-2
+    Configure the thread pool of the application server to have the
+    desired number of maximum threads. The load generator is set up to
+    have 20 clients (e.g., in fhb, -c 20) with no think time (no -W argument).
+
+Example 9-3
+    Configure the thread pool of the application server to have the
+    same number of threads as the target machine. Configure the number of
+    clients in the load generator as given in the example (e.g., up to
+    -c 64 for fhb).
+
+Example 10-1
+    This test requires that the application server be set up on various
+    remote networks.
+
+    For the whitespace removed test, configure the application to trim
+    whitespace from the JSP pages. In glassfish, edit the
+    config/default-web.xml file and add this XML to the 
+    org.apache.jasper.servlet.JspServlet definition:
+    <init-param>
+        <param-name>trimSpaces</param-name>
+        <param-name>true</param-name>
+    </init-param>
+
+    To turn development mode off for glassfish, add this definition:
+    <init-param>
+        <param-name>development</param-name>
+        <param-name>false</param-name>
+    </init-param>
+
+    To pre-encode Strings for glassfish, add this definition:
+    <init-param>
+        <param-name>genStrAsCharArray</param-name>
+        <param-name>true</param-name>
+    </init-param>
+
+    Glassfish will support compression without any changes,  but the load
+    generator must be set to send the accept-string: gzip (or other
+    compression level) header with the request. For fhb, that is accomplished
+    by adding -z gzip to the command line.
+
+Example 10-2:
+    Configure (through the administration console or other means) the desired
+    EJB pool size. The sleep time for the PostConstruct method (which defaults
+    to 0) can be set via the system property -DEJBSleepTime=10 (e.g., for
+    10 milliseconds).

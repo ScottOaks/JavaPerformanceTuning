@@ -1,0 +1,4 @@
+Obtain the sample eBay popular items and store the unchanged XML file in
+ebay.xml.
+
+Trim all the whitespace from the XML and store in ebay-trim.xml

@@ -1,0 +1,2 @@
+inputFile=docs/xml/ebay.xml
+className=net.sdo.DOMBuilderTest

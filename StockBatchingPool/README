@@ -1,0 +1,33 @@
+To build:
+    Even if you are not using an entity manager, building this requires a
+    JPA implementation (since the mock entity manager still uses JPA
+    interfaces). Download an implementation (e.g., the reference implementation
+    from GlassFish) and in your environment set
+
+    JAVAX_PERSISTENCE=path_to/javax.persistence.jar
+
+    Then run
+    ant
+
+To run:
+    In general, to use a MockEntityManager, run
+
+    java <jvmargs> -DMockEntityManager=MockEntityManager \
+        -jar jars/StockBatchingPool.jar \
+	[core size] [max size] [0|1|2]
+
+    where 
+    core size -- optional, default 1, core size of ThreadPoolExecutor
+    max size -- optional, default # of CPUs on machine, max size of TPE
+    0|1|2 -- optional, default 0
+        0: Use a LinkedBlockingQueue
+	1: Use a SynchronousQueue
+	2: Use an ArrayBlockingQueue of 10,000 elements
+
+Notes on Examples:
+
+Example 9-1:
+    java <jvmargs> -jar jars/StockBatchingPool.jar N N
+    where N is the number of threads desired in the pool
+
+

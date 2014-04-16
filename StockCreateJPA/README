@@ -1,0 +1,47 @@
+To build:
+    This is a standalone (Java SE) application for JPA.
+    In your environment, set
+    JAVAX_PERSISTENCE=path_to/javax.persistence.jar
+
+    The META-INF/persistence.xml file contains information that JPA will
+    use for the database connection. Edit it for the appropriate values for
+    your database. That file is based on the eclipselink JPA reference
+    implementation; it will need other changes for Hibernate or other
+    JPA implementations (chaging the provider class and eclipselink
+    property names).
+
+    Although the example doesn't use JDBC directly, you will need the
+    appropriate JDBC driver to compile the application (so that the
+    driver gets set into the classpath). In your environment, set
+    JDBC_JAR=/path_to/ojdbc6.jar
+    (or whichever driver you are using).
+
+To run:
+    Use the schema file in StockCreateJDBC to create the necessary schema
+    in the database. 
+
+    Running a Java SE program with JPA requires that the JPA classes be
+    "enhanced". Eclipselink does this at run time using the javaagent
+    argument. Other implementations may require that the jar file be
+    pre-processed; check your provider documentation to see if that is
+    required.
+
+    java <jvmargs> -javaagent:${ECLIPSELINK_JAR} -jar jars/StockCreateJPA.jar \
+        nThreads nStocks startDate endDate nTransactions reuseEM reuseTX
+
+    nThreads -- Number of threads to use for parallel insert
+    nStocks -- Number of stocks to insert
+    startDate -- Starting date of range
+    endDate -- Ending date of range
+    nTransactions -- Number of stocks per transaction
+    reuseEM -- If true, don't create a new EM for each transaction
+    reuseTX -- If true, don't create a new transaction
+
+Notes on Examples:
+
+Example 11-2:
+    java -javaagent:${ECLIPSELINK_JAR} -jar jars/StockCreateJPA.jar \
+        1 128 1/1/13 12/31/13 128 true true
+
+    To explore changes in statement caching and batch sizes, change the
+    values in persistence.xml

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<project name="StockEarEJB" default="jar">
+    <property environment="env"/>
+    <property name="stock_api" location="../../api/jars/stockapi.jar"/>
+    <property name="stock_impl" location="../../impl/jars/stockimpl.jar"/>
+
+    <target name="init">
+        <mkdir dir="classes"/>
+    </target>
+
+    <path id="class.path">
+        <pathelement path="${stock_impl}"/>
+        <pathelement path="${stock_api}"/>
+        <pathelement location="${env.JAVAX_PERSISTENCE}"/>
+        <pathelement location="${env.JAVAX_EJB}"/>
+    </path>
+
+    <target name="build-deps">
+        <ant dir="../../api" target="jar"/>
+        <ant dir="../../impl" target="jar"/>
+    </target>
+
+    <target name="compile" depends="init, build-deps">
+        <javac includeantruntime="false" srcdir="src"
+               debug="true" destdir="classes"
+               classpathref="class.path"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <jar jarfile="jars/StockEar-ejb.jar">
+            <fileset dir="classes" includes="**/*.class"/>
+            <zipfileset dir="." includes="persistence.xml"
+	                        fullpath="META-INF/persistence.xml"/>
+        </jar>
+    </target>
+
+    <target name="clean">
+        <delete>
+          <fileset dir="classes"/>
+          <fileset dir="jars"/>
+        </delete>
+    </target>
+</project>

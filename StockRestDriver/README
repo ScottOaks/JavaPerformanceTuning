@@ -1,0 +1,29 @@
+To build:
+    Building this requires the Faban driver kit downloaded from
+    http://faban.org
+    You must set the following environment variable:
+    FABAN_DRIVER=/path_to/fabandriver.jar
+
+To run:
+    Edit the run.xml file and change the
+    outputDir -- Where you want the output saved
+    HOST -- server where the service is deployed
+    POST -- port where the service is deployed
+    In the operationMix, set the test you want to execute to 1
+    and set all other tests to 0 (or, alternately, set those values
+    to execute a mix of operations)
+
+    Set your clsaspath to incude fabancommon.jar, fabandriver.jar, and
+    jars/driver.jar
+    java -Dbenchmark.config=run.xml com.sun.faban.driver.engine.MasterImpl
+
+    The output directory will have a set of numbered directories (starting at
+    1, increasing monotonically for each run). The summary.xml file in each
+    directory will have the repsonse times and so on.
+
+Example 10-14 and 10-15:
+    The various scenarios are chosen by setting the operationMix as described
+    above.
+
+    The caching in scenario 15 is enabled by setting the CACHE property
+    to true in the run.xml file.

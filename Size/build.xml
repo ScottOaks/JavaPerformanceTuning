@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<project name="Size" default="jar">
+
+    <target name="init">
+	<mkdir dir="classes"/>
+	<mkdir dir="jars"/>
+    </target>
+
+    <target name="compile" depends="init">
+	<property environment="env"/>
+	<javac includeantruntime="false" srcdir="src"
+	       debug="true" destdir="classes">
+	    <classpath>
+		<pathelement location="${env.SIZEOF}"/>
+	    </classpath>
+	</javac>
+    </target>
+
+    <target name="jar" depends="compile">
+	<jar jarfile="jars/size.jar">
+	    <manifest>
+	        <attribute name="Main-Class" value="net.sdo.TestSizeOf"/>
+	    </manifest>
+	    <fileset dir="classes" includes="**/*.class"/>
+	</jar>
+    </target>
+
+    <target name="clean">
+        <delete>
+	    <fileset dir="classes"/>
+	    <fileset dir="jars"/>
+        </delete>
+    </target>
+</project>

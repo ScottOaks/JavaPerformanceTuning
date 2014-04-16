@@ -1,0 +1,27 @@
+To build:
+    Even if you are not using an entity manager, building this requires a
+    JPA implementation (since the mock entity manager still uses JPA
+    interfaces). Download an implementation (e.g., the reference implementation
+    from GlassFish) and in your environment set
+
+    JAVAX_PERSISTENCE=path_to/javax.persistence.jar
+
+    Then run
+    ant
+
+To run:
+    java <jvmargs> -DMockEntityManager=MockEntityManager \
+          -jar jars/StockSerialization.jar 
+
+Notes on Examples:
+Example 10-11:
+    The regular SPH is labeled eager transient in the output
+    The transient histogram is labeled eagaer transient
+
+Example 10-12:
+    No compresion is the regular SPH case
+    Compression/Decompression is the serialize/deserialize case
+    Compression only is the lazy compression case
+
+Example 12-1:
+    Unbuffered compression/decompression output

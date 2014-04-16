@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<project name="JavaPerformanceTuning" default="clean">
+
+    <target name="clean">
+        <ant dir="api" antfile="build.xml" target="clean"/>
+        <ant dir="impl" antfile="build.xml" target="clean"/>
+        <ant dir="ClassLoading" antfile="build.xml" target="clean"/>
+        <ant dir="CountFilter" antfile="build.xml" target="clean"/>
+        <ant dir="Exception" antfile="build.xml" target="clean"/>
+        <ant dir="FalseSharing" antfile="build.xml" target="clean"/>
+        <ant dir="FindFilter" antfile="build.xml" target="clean"/>
+        <ant dir="JNI" antfile="build.xml" target="clean"/>
+        <ant dir="JStack" antfile="build.xml" target="clean"/>
+        <ant dir="Lambda" antfile="build.xml" target="clean"/>
+        <ant dir="ParallelTask" antfile="build.xml" target="clean"/>
+        <ant dir="ParsingTest" antfile="build.xml" target="clean"/>
+        <ant dir="SampleFinalizer" antfile="build.xml" target="clean"/>
+        <ant dir="Size" antfile="build.xml" target="clean"/>
+        <ant dir="StockBatching" antfile="build.xml" target="clean"/>
+        <ant dir="StockBatchingForkJoin" antfile="build.xml" target="clean"/>
+        <ant dir="StockBatchingPool" antfile="build.xml" target="clean"/>
+        <ant dir="StockCreateJDBC" antfile="build.xml" target="clean"/>
+        <ant dir="StockCreateJPA" antfile="build.xml" target="clean"/>
+        <ant dir="StockEar" antfile="build.xml" target="clean"/>
+        <ant dir="StockReadJPA" antfile="build.xml" target="clean"/>
+        <ant dir="StockRestDriver" antfile="build.xml" target="clean"/>
+        <ant dir="StockRestService" antfile="build.xml" target="clean"/>
+        <ant dir="StockSerialization" antfile="build.xml" target="clean"/>
+        <ant dir="StringIntern" antfile="build.xml" target="clean"/>
+        <ant dir="UncontendedSync" antfile="build.xml" target="clean"/>
+    </target>
+</project>

@@ -1,0 +1,2 @@
+inputFile=docs/json/ebay.json
+className=net.sdo.JsonJacksonParserTest

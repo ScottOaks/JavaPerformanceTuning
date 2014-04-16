@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<project name="Lambda" default="compile">
+
+    <target name="init">
+	<mkdir dir="classes"/>
+	<mkdir dir="classes.url"/>
+	<mkdir dir="jars"/>
+    </target>
+
+    <target name="compile" depends="init">
+	<property environment="env"/>
+	<javac includeantruntime="false" srcdir="src"
+	       debug="true" destdir="classes"
+	       excludes="**/*IntTest.java">
+	</javac>
+	<javac includeantruntime="false" srcdir="src"
+	       debug="true" destdir="classes.url"
+	       includes="**/*IntTest.java">
+	</javac>
+    </target>
+
+    <target name="clean">
+        <delete>
+	    <fileset dir="classes"/>
+	    <fileset dir="classes.url"/>
+        </delete>
+    </target>
+</project>

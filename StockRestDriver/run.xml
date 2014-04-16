@@ -1,0 +1,62 @@
+<myBenchmark>
+    <runConfig definition="net.sdo.rest.StockRestDriver">
+	<scale>1</scale>
+	<runControl unit="time">
+            <rampUp>30</rampUp>
+            <steadyState>30</steadyState>
+            <rampDown>30</rampDown>
+	</runControl>
+	<outputDir>/home/sdo/workload/benchmarks/stock_rest/output</outputDir>
+	<audit>false</audit>
+	<threadStart>
+	    <delay>100</delay>
+	    <simultaneous>false</simultaneous>
+	    <parallel>false</parallel>
+	</threadStart>
+	<runtimeStats enabled="false">
+	    <interval>5</interval>
+	</runtimeStats>
+	<driverConfig name="StockRestDriver">
+	    <agents>1</agents>
+	    <runtimeStats target="9988"/>
+	    <properties>
+		<property>
+                    <name>HOST</name>
+                    <value>localhost</value>
+		</property>
+		<property>
+                    <name>PORT</name>
+                    <value>8080</value>
+		</property>
+		<property>
+                    <name>CACHE</name>
+                    <value>false</value>
+		</property>
+            </properties>
+            <operationMix>
+		<name>StockRest1Yr</name><r>0</r>
+            </operationMix>
+            <operationMix>
+		<name>StockRest1YrNoData</name><r>0</r>
+            </operationMix>
+            <operationMix>
+		<name>StockRest5Calls</name><r>0</r>
+            </operationMix>
+            <operationMix>
+		<name>StockRest2Calls</name><r>0</r>
+            </operationMix>
+            <operationMix>
+		<name>StockRest10Calls</name><r>0</r>
+            </operationMix>
+            <operationMix>
+		<name>StockRest2Yr</name><r>0</r>
+            </operationMix>
+            <operationMix>
+		<name>StockRest6Months</name><r>0</r>
+            </operationMix>
+            <operationMix>
+		<name>StockRest5Yr</name><r>1</r>
+            </operationMix>
+	</driverConfig>
+    </runConfig>
+</myBenchmark>

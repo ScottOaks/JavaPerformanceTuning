@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<project name="StockBatchingForkJoin" default="jar">
+    <property environment="env"/>
+    <property name="stock_api" location="../api/jars/stockapi.jar"/>
+    <property name="stock_impl" location="../impl/jars/stockimpl.jar"/>
+
+    <target name="init">
+	<mkdir dir="classes"/>
+    </target>
+
+    <path id="class.path">
+        <pathelement path="${stock_api}"/>
+        <pathelement path="${stock_impl}"/>
+        <pathelement location="${env.JAVAX_PERSISTENCE}"/>
+    </path>
+
+    <target name="build-deps">
+        <ant dir="../api" target="jar"/>
+        <ant dir="../impl" target="jar"/>
+    </target>
+
+    <target name="compile" depends="init,build-deps">
+	<javac includeantruntime="false" srcdir="src"
+	       debug="true" destdir="classes"
+	       classpathref="class.path"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <jar jarfile="jars/StockBatchingForkJoin.jar">
+	    <manifest>
+	        <attribute name="Class-Path"
+		    value="${env.JAVAX_PERSISTENCE} ${stock_api} ${stock_impl}"/>
+		<attribute name="Main-Class" value="net.sdo.StockBatchingForkJoin"/>
+	    </manifest>
+	    <fileset dir="classes" includes="**/*.class"/>
+	</jar>
+    </target>
+
+    <target name="clean">
+        <delete>
+	  <fileset dir="classes"/>
+	  <fileset dir="jars"/>
+	</delete>
+    </target>
+</project>

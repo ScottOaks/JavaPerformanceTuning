@@ -1,0 +1,14 @@
+To build:
+    This examples uses the SizeOf library from SourceForge:
+    http://sizeof.sourceforge.net/
+    Download the library from that site and set
+    SIZEOF=/path_to/SizeOf.jar
+
+To run:
+    java <jvmargs> -javaagent:$SIZEOF -jar jars/size.jar
+    This produces output for various sized objects referenced in the text
+    (which can vary depending on the 32-/64-bit setting of the JVM
+    and whether or not CompressedOops are in use).
+
+Example 7-2:
+    Size of a, b and c classes

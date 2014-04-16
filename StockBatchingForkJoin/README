@@ -1,0 +1,22 @@
+To build:
+    Even if you are not using an entity manager, building this requires a
+    JPA implementation (since the mock entity manager still uses JPA
+    interfaces). Download an implementation (e.g., the reference implementation
+    from GlassFish) and in your environment set
+
+    JAVAX_PERSISTENCE=path_to/javax.persistence.jar
+
+    Then run
+    ant
+
+To run:
+    In general, to use a MockEntityManager, run
+
+    java <jvmargs> -DMockEntityManager=MockEntityManager \
+        -jar jars/StockBatchingForkJoin.jar \
+	[size_of_fork/join_pool]
+
+    The fork/join pool size is optional and defaults to the number of CPUs
+    on the machine. Remember that the operation will also use the calling
+    thread, so the effective number of tasks running simultaneously is one
+    more than the pool size.

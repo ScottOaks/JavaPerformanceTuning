@@ -1,0 +1,23 @@
+To build:
+    ant
+
+To run:
+    java -jar jars/lambda.jar nLoops classname 
+    or
+    java -jar jars/lambda.jar nLoops class_dir classname
+    
+    nLoops -- number of loops to run calculation for. The second and third
+        averages should converge to roughly the same number to show that
+	compiler optimizations have occurred
+    The classname argument should be either
+        net.sdo.AnonymousIntTest or net.sdo.LambdaIntTest
+    If the class_dir option is given, then each iteration will load the
+        clsases in a new classloader
+
+Example 12-8:
+    java -cp classes:classes.url net.sdo.ClassLoadingDelegate 5000 net.sdo.LambdaIntTest
+    java -cp classes:classes.url net.sdo.ClassLoadingDelegate 5000 net.sdo.AnonymousIntTest
+
+Example 12-9:
+    java -cp classes net.sdo.ClassLoadingDelegate 500 classes.url net.sdo.LambdaIntTest
+    java -cp classes net.sdo.ClassLoadingDelegate 500 classes.url net.sdo.AnonymousIntTest

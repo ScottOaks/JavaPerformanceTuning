@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<project name="StockImpl" default="jar">
+    <property name="impl" value="EagerLazyImpl"/>
+
+    <target name="init">
+	<mkdir dir="classes"/>
+	<mkdir dir="jars"/>
+    </target>
+
+    <target name="compile" depends="init">
+	<property environment="env"/>
+	<javac includeantruntime="false" srcdir="src" destdir="classes"
+	       debug="true" excludes="**/*QueryCache*.java">
+	    <classpath>
+	        <pathelement location="${env.JAVAX_PERSISTENCE}"/>
+	        <pathelement location="../api/jars/stockapi.jar"/>
+	    </classpath>
+	</javac>
+    </target>
+
+    <target name="compile-all" depends="init">
+	<property environment="env"/>
+	<javac includeantruntime="false" srcdir="src" destdir="classes"
+	       debug="true">
+	    <classpath>
+	        <pathelement location="${env.JAVAX_PERSISTENCE}"/>
+	        <pathelement location="${env.ECLIPSELINK_JAR}"/>
+	        <pathelement location="../api/jars/stockapi.jar"/>
+	    </classpath>
+	</javac>
+    </target>
+
+    <target name="jar" depends="compile">
+	<jar jarfile="jars/stockimpl.jar">
+	    <fileset dir="classes" includes="**/Mock*.class"/>
+	    <fileset dir="classes" includes="**/StockOptionPK*.class"/>
+	    <fileset dir="classes" includes="**/StockPricePK*.class"/>
+	    <fileset dir="classes" includes="**/StockPriceHistory*.class"/>
+	    <fileset dir="classes" includes="**/StockOptionPrice${impl}*.class"/>
+	    <fileset dir="classes" includes="**/StockPrice${impl}*.class"/>
+	</jar>
+    </target>
+
+    <target name="jar-all" depends="compile-all">
+	<jar jarfile="jars/stockimpl-all.jar">
+	    <fileset dir="classes" includes="**/*.class"/>
+	</jar>
+    </target>
+
+    <target name="clean">
+        <delete>
+	    <fileset dir="classes"/>
+	    <fileset dir="jars"/>
+        </delete>
+    </target>
+</project>

@@ -1,0 +1,3 @@
+inputFile=docs/xml/ebay.xml
+className=net.sdo.FilteringDOMBuilderTest
+targetItemCount=10

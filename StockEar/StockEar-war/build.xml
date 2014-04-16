@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<project name="StockEarWar" default="war">
+    <property environment="env"/>
+    <property name="stock_api" location="../../api/jars/stockapi.jar"/>
+    <property name="stock_ejb" location="../StockEar-ejb/jars/StockEar-ejb.jar"/>
+
+    <target name="init">
+        <mkdir dir="classes"/>
+    </target>
+
+    <path id="class.path">
+        <pathelement path="${stock_api}"/>
+        <pathelement path="${stock_ejb}"/>
+        <pathelement location="${env.JAVAX_EJB}"/>
+        <pathelement location="${env.JAVAX_SERVLET}"/>
+    </path>
+
+    <target name="build-deps">
+	<ant dir="../StockEar-ejb" target="jar"/>
+    </target>
+
+    <target name="compile" depends="init,build-deps">
+        <javac includeantruntime="false" srcdir="src"
+               debug="true" destdir="classes"
+               classpathref="class.path"/>
+    </target>
+
+    <target name="war" depends="compile">
+        <war warfile="jars/StockEar-war.war" webxml="meta/web.xml">
+            <manifest>
+            </manifest>
+            <classes dir="classes" includes="**/*.class"/>
+	    <fileset dir="src/jsp" includes="**/*.jsp"/>
+        </war>
+    </target>
+
+    <target name="clean">
+        <delete>
+          <fileset dir="classes"/>
+          <fileset dir="jars"/>
+        </delete>
+	<ant dir="../StockEar-ejb" target="clean"/>
+    </target>
+</project>
