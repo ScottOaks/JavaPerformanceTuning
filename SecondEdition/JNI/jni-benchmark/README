@@ -1,0 +1,4 @@
+
+mvn package
+make
+java (args) -jar target/benchmarks.jar (jmh args) --jvmArgs "-DLIBPATH=`pwd`/lib"

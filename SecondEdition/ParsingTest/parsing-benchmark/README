@@ -1,0 +1,3 @@
+
+Need to manaully copy src/main/resources/schema.xsd to /tmp for the
+(non-caching) SAX validation to happen.

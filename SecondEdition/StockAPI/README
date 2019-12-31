@@ -1,0 +1,5 @@
+This is the API (interface + helper) for various examples based on the stock
+price simulations.
+
+mvn package
+will build the stock-api.jar

@@ -1,0 +1,56 @@
+To build:
+    Make sure you have built StockAPI and StockImpl
+    Then
+    mvn package
+    java -jar StockBatching/target/stock-batching-1.0-SNAPSHOT-shaded.jar <args>
+    or
+    mvn install
+    java -jar <local-repository>/net/sdo/stock/stock-batching/1.0-SNAPSHOT/stock-batching-1.0-SNAPSHOT-shaded.jar <args>
+
+To run:
+    In general, to use a MockEntityManager, run
+
+    java <jvmargs> -DMockEntityManager=MockEntityManager \
+          -jar StockBatching/target/stock-batching-1.0-SNAPSHOT-shaded.jar \
+	  [-n num_stocks] \
+	  [-s startDate] [-e endDate] [-l] [-m memoryUse] \
+	  [-t nThreads]
+
+    where 
+    -n num_stocks -- optional, default 10000
+    -s startDate -- optional, default 01/01/20
+    -e endDate -- optional, default 12/31/20
+    -l -- optional; if present, use logging implementation
+    -m memoryUse -- optional, number of entries to save (put pressure on heap)
+    -t nThreads -- optiona, number of threads, default 1
+
+Note that the number of stocks are memory use are per thread: -n 1000 -t 5
+will calculate the mock histories of 5000 stocks (1000 per thread); -m 100
+will save the past 100 entries per thread.
+
+Notes on Examples:
+Example 4-2:
+    To limit the impact of writing to System.out, redirect to /dev/null
+
+    time java -client -DMockEntityManager=MockEntityManager \
+    	 -jar jars/StockBatcher.jar
+    time java -server -DMockEntityManager=MockEntityManager \
+    	 -jar jars/StockBatcher.jar
+    time java -XX:+TieredCompilation -DMockEntityManager=MockEntityManager \
+    	 -jar jars/StockBatcher.jar
+
+    Each command is run with an argument of 1, 10, 100, and so on to produce
+    the results in the table.
+
+Example 5-1:
+    To run 100K stocks for 1 thread in a 1G heap for 3 years, saving 1000
+    entries/thread for GC pressure:
+    time java -Xmx1g -Xms1g \
+	     -XX:+UseG1 \
+             -DMockEntityManager=MockEntityManager \
+             -jar StockBatching/target/stock-batching-1.0-SNAPSHOT-shaded.jar \
+	     -n 100000 -s 1/1/19 -e 12/31/21 -m 1000
+
+Example 7-4:
+    Run with this argument:
+    -DMockEntityManager=StdRandomMockEntityManager

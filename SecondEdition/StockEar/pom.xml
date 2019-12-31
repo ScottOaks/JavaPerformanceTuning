@@ -1,0 +1,13 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.sdo.stock</groupId>
+  <artifactId>StockEar</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>StockBatchingEar</name>
+  <modules>
+    <module>StockEar-ear</module>
+    <module>StockEar-ejb</module>
+    <module>StockEar-war</module>
+  </modules>
+</project>

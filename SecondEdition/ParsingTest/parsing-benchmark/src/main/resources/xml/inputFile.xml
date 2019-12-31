@@ -1,0 +1,485 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<findItemsByKeywordsResponse xmlns="http://www.ebay.com/marketplace/search/v1/services">
+<ack>Success</ack>
+<version>1.13.0</version>
+<timestamp>2019-08-26T19:57:46.715Z</timestamp>
+<searchResult count="100">
+<item>
+<itemId>153452538114</itemId>
+<title>Apple iPhone 6 - 16GB - Space Gray - Fully Unlocked - Good Condition</title>
+<globalId>EBAY-US</globalId>
+<subtitle>SHIPS 2 DAY FREE + NEW CHARGER &amp; CABLE + 3 MO WARRANTY</subtitle>
+<primaryCategory>
+<categoryId>9355</categoryId>
+<categoryName>Cell Phones &amp; Smartphones</categoryName>
+</primaryCategory>
+<galleryURL>https://thumbs3.ebaystatic.com/m/mJ9yLdZwvJhSeaXf5CHtfYw/140.jpg</galleryURL>
+<viewItemURL>https://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10041&amp;campid=1234567890&amp;customid=k-man&amp;lgeo=1&amp;vectorid=229466&amp;item=153452538114</viewItemURL>
+<productId type="ReferenceID">240458865</productId>
+<paymentMethod>PayPal</paymentMethod>
+<autoPay>true</autoPay>
+<postalCode>33179</postalCode>
+<location>Miami,FL,USA</location>
+<country>US</country>
+<shippingInfo>
+<shippingServiceCost currencyId="USD">0.0</shippingServiceCost>
+<shippingType>Free</shippingType>
+<shipToLocations>Worldwide</shipToLocations>
+<expeditedShipping>true</expeditedShipping>
+<oneDayShippingAvailable>false</oneDayShippingAvailable>
+<handlingTime>1</handlingTime>
+</shippingInfo>
+<sellingStatus>
+<currentPrice currencyId="USD">97.95</currentPrice>
+<convertedCurrentPrice currencyId="USD">97.95</convertedCurrentPrice>
+<sellingState>Active</sellingState>
+<timeLeft>P19DT17H59M50S</timeLeft>
+</sellingStatus>
+<listingInfo>
+<bestOfferEnabled>false</bestOfferEnabled>
+<buyItNowAvailable>false</buyItNowAvailable>
+<startTime>2019-04-15T13:57:36.000Z</startTime>
+<endTime>2019-09-15T13:57:36.000Z</endTime>
+<listingType>StoreInventory</listingType>
+<gift>false</gift>
+<watchCount>2273</watchCount>
+</listingInfo>
+<returnsAccepted>true</returnsAccepted>
+<galleryPlusPictureURL>https://galleryplus.ebayimg.com/ws/web/153452538114_1_28_1.jpg</galleryPlusPictureURL>
+<condition>
+<conditionId>3000</conditionId>
+<conditionDisplayName>Used</conditionDisplayName>
+</condition>
+<isMultiVariationListing>false</isMultiVariationListing>
+<discountPriceInfo>
+<originalRetailPrice currencyId="USD">399.0</originalRetailPrice>
+<pricingTreatment>STP</pricingTreatment>
+<soldOnEbay>false</soldOnEbay>
+<soldOffEbay>false</soldOffEbay>
+</discountPriceInfo>
+<topRatedListing>true</topRatedListing>
+</item>
+<item>
+<itemId>113829665592</itemId>
+<title>Apple iPhone 6s - 16GB 32GB 64GB 128GB - Unlocked AT&amp;T Verizon T-Mobile Sprint</title>
+<globalId>EBAY-US</globalId>
+<primaryCategory>
+<categoryId>9355</categoryId>
+<categoryName>Cell Phones &amp; Smartphones</categoryName>
+</primaryCategory>
+<galleryURL>https://thumbs1.ebaystatic.com/pict/1138296655924040_1.jpg</galleryURL>
+<viewItemURL>https://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10041&amp;campid=1234567890&amp;customid=k-man&amp;lgeo=1&amp;vectorid=229466&amp;item=113829665592</viewItemURL>
+<paymentMethod>PayPal</paymentMethod>
+<autoPay>true</autoPay>
+<postalCode>32835</postalCode>
+<location>Orlando,FL,USA</location>
+<country>US</country>
+<shippingInfo>
+<shippingServiceCost currencyId="USD">8.99</shippingServiceCost>
+<shippingType>Flat</shippingType>
+<shipToLocations>Worldwide</shipToLocations>
+<expeditedShipping>true</expeditedShipping>
+<oneDayShippingAvailable>false</oneDayShippingAvailable>
+<handlingTime>1</handlingTime>
+</shippingInfo>
+<sellingStatus>
+<currentPrice currencyId="USD">170.0</currentPrice>
+<convertedCurrentPrice currencyId="USD">170.0</convertedCurrentPrice>
+<sellingState>Active</sellingState>
+<timeLeft>P28DT16H22M17S</timeLeft>
+</sellingStatus>
+<listingInfo>
+<bestOfferEnabled>false</bestOfferEnabled>
+<buyItNowAvailable>false</buyItNowAvailable>
+<startTime>2019-07-24T12:20:03.000Z</startTime>
+<endTime>2019-09-24T12:20:03.000Z</endTime>
+<listingType>FixedPrice</listingType>
+<gift>false</gift>
+<watchCount>18</watchCount>
+</listingInfo>
+<returnsAccepted>true</returnsAccepted>
+<condition>
+<conditionId>3000</conditionId>
+<conditionDisplayName>Used</conditionDisplayName>
+</condition>
+<isMultiVariationListing>true</isMultiVariationListing>
+<topRatedListing>true</topRatedListing>
+</item>
+<item>
+<itemId>401433628517</itemId>
+<title>Apple iPhone 7 128GB "Factory Unlocked" 4G LTE iOS WiFi Smartphone</title>
+<globalId>EBAY-US</globalId>
+<primaryCategory>
+<categoryId>9355</categoryId>
+<categoryName>Cell Phones &amp; Smartphones</categoryName>
+</primaryCategory>
+<galleryURL>https://thumbs2.ebaystatic.com/pict/401433628517404000000002_1.jpg</galleryURL>
+<viewItemURL>https://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10041&amp;campid=1234567890&amp;customid=k-man&amp;lgeo=1&amp;vectorid=229466&amp;item=401433628517</viewItemURL>
+<paymentMethod>PayPal</paymentMethod>
+<autoPay>true</autoPay>
+<postalCode>07014</postalCode>
+<location>Clifton,NJ,USA</location>
+<country>US</country>
+<shippingInfo>
+<shippingServiceCost currencyId="USD">0.0</shippingServiceCost>
+<shippingType>Free</shippingType>
+<shipToLocations>Worldwide</shipToLocations>
+<expeditedShipping>true</expeditedShipping>
+<oneDayShippingAvailable>false</oneDayShippingAvailable>
+<handlingTime>1</handlingTime>
+</shippingInfo>
+<sellingStatus>
+<currentPrice currencyId="USD">209.95</currentPrice>
+<convertedCurrentPrice currencyId="USD">209.95</convertedCurrentPrice>
+<sellingState>Active</sellingState>
+<timeLeft>P4DT15H46M47S</timeLeft>
+</sellingStatus>
+<listingInfo>
+<bestOfferEnabled>false</bestOfferEnabled>
+<buyItNowAvailable>false</buyItNowAvailable>
+<startTime>2017-10-31T11:44:33.000Z</startTime>
+<endTime>2019-08-31T11:44:33.000Z</endTime>
+<listingType>StoreInventory</listingType>
+<gift>false</gift>
+<watchCount>2485</watchCount>
+</listingInfo>
+<returnsAccepted>true</returnsAccepted>
+<condition>
+<conditionId>2500</conditionId>
+<conditionDisplayName>Seller refurbished</conditionDisplayName>
+</condition>
+<isMultiVariationListing>true</isMultiVariationListing>
+<topRatedListing>true</topRatedListing>
+</item>
+<item>
+<itemId>401433628517</itemId>
+<title>Apple iPhone 7 128GB "Factory Unlocked" 4G LTE iOS WiFi Smartphone</title>
+<globalId>EBAY-US</globalId>
+<primaryCategory>
+<categoryId>9355</categoryId>
+<categoryName>Cell Phones &amp; Smartphones</categoryName>
+</primaryCategory>
+<galleryURL>https://thumbs2.ebaystatic.com/pict/401433628517404000000004_1.jpg</galleryURL>
+<viewItemURL>https://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10041&amp;campid=1234567890&amp;customid=k-man&amp;lgeo=1&amp;vectorid=229466&amp;item=401433628517</viewItemURL>
+<paymentMethod>PayPal</paymentMethod>
+<autoPay>true</autoPay>
+<postalCode>07014</postalCode>
+<location>Clifton,NJ,USA</location>
+<country>US</country>
+<shippingInfo>
+<shippingServiceCost currencyId="USD">0.0</shippingServiceCost>
+<shippingType>Free</shippingType>
+<shipToLocations>Worldwide</shipToLocations>
+<expeditedShipping>true</expeditedShipping>
+<oneDayShippingAvailable>false</oneDayShippingAvailable>
+<handlingTime>1</handlingTime>
+</shippingInfo>
+<sellingStatus>
+<currentPrice currencyId="USD">209.95</currentPrice>
+<convertedCurrentPrice currencyId="USD">209.95</convertedCurrentPrice>
+<sellingState>Active</sellingState>
+<timeLeft>P4DT15H46M47S</timeLeft>
+</sellingStatus>
+<listingInfo>
+<bestOfferEnabled>false</bestOfferEnabled>
+<buyItNowAvailable>false</buyItNowAvailable>
+<startTime>2017-10-31T11:44:33.000Z</startTime>
+<endTime>2019-08-31T11:44:33.000Z</endTime>
+<listingType>StoreInventory</listingType>
+<gift>false</gift>
+<watchCount>2723</watchCount>
+</listingInfo>
+<returnsAccepted>true</returnsAccepted>
+<condition>
+<conditionId>2500</conditionId>
+<conditionDisplayName>Seller refurbished</conditionDisplayName>
+</condition>
+<isMultiVariationListing>true</isMultiVariationListing>
+<topRatedListing>true</topRatedListing>
+</item>
+<item>
+<itemId>143320477879</itemId>
+<title>Apple iPhone 6S - 16GB, 64GB, 128GB - Factory GSM Unlocked; AT&amp;T / T-Mobile</title>
+<globalId>EBAY-US</globalId>
+<subtitle>Free Returns √ 90 Day Warranty √ Straight Talk √ H20</subtitle>
+<primaryCategory>
+<categoryId>9355</categoryId>
+<categoryName>Cell Phones &amp; Smartphones</categoryName>
+</primaryCategory>
+<galleryURL>https://thumbs1.ebaystatic.com/pict/04040_0.jpg</galleryURL>
+<viewItemURL>https://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10041&amp;campid=1234567890&amp;customid=k-man&amp;lgeo=1&amp;vectorid=229466&amp;item=143320477879</viewItemURL>
+<paymentMethod>PayPal</paymentMethod>
+<autoPay>true</autoPay>
+<postalCode>11213</postalCode>
+<location>Brooklyn,NY,USA</location>
+<country>US</country>
+<shippingInfo>
+<shippingServiceCost currencyId="USD">0.0</shippingServiceCost>
+<shippingType>Free</shippingType>
+<shipToLocations>Worldwide</shipToLocations>
+<expeditedShipping>true</expeditedShipping>
+<oneDayShippingAvailable>false</oneDayShippingAvailable>
+<handlingTime>1</handlingTime>
+</shippingInfo>
+<sellingStatus>
+<currentPrice currencyId="USD">104.99</currentPrice>
+<convertedCurrentPrice currencyId="USD">104.99</convertedCurrentPrice>
+<sellingState>Active</sellingState>
+<timeLeft>P9DT23H10M44S</timeLeft>
+</sellingStatus>
+<listingInfo>
+<bestOfferEnabled>false</bestOfferEnabled>
+<buyItNowAvailable>false</buyItNowAvailable>
+<startTime>2019-07-05T19:08:30.000Z</startTime>
+<endTime>2019-09-05T19:08:30.000Z</endTime>
+<listingType>StoreInventory</listingType>
+<gift>false</gift>
+<watchCount>521</watchCount>
+</listingInfo>
+<returnsAccepted>true</returnsAccepted>
+<condition>
+<conditionId>1500</conditionId>
+<conditionDisplayName>Open box</conditionDisplayName>
+</condition>
+<isMultiVariationListing>true</isMultiVariationListing>
+<topRatedListing>true</topRatedListing>
+</item>
+<item>
+<itemId>113829665592</itemId>
+<title>Apple iPhone 6s - 16GB 32GB 64GB 128GB - Unlocked AT&amp;T Verizon T-Mobile Sprint</title>
+<globalId>EBAY-US</globalId>
+<primaryCategory>
+<categoryId>9355</categoryId>
+<categoryName>Cell Phones &amp; Smartphones</categoryName>
+</primaryCategory>
+<galleryURL>https://thumbs1.ebaystatic.com/pict/04040_0.jpg</galleryURL>
+<viewItemURL>https://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10041&amp;campid=1234567890&amp;customid=k-man&amp;lgeo=1&amp;vectorid=229466&amp;item=113829665592</viewItemURL>
+<paymentMethod>PayPal</paymentMethod>
+<autoPay>true</autoPay>
+<postalCode>32835</postalCode>
+<location>Orlando,FL,USA</location>
+<country>US</country>
+<shippingInfo>
+<shippingServiceCost currencyId="USD">8.99</shippingServiceCost>
+<shippingType>Flat</shippingType>
+<shipToLocations>Worldwide</shipToLocations>
+<expeditedShipping>true</expeditedShipping>
+<oneDayShippingAvailable>false</oneDayShippingAvailable>
+<handlingTime>1</handlingTime>
+</shippingInfo>
+<sellingStatus>
+<currentPrice currencyId="USD">64.48</currentPrice>
+<convertedCurrentPrice currencyId="USD">64.48</convertedCurrentPrice>
+<sellingState>Active</sellingState>
+<timeLeft>P28DT16H22M17S</timeLeft>
+</sellingStatus>
+<listingInfo>
+<bestOfferEnabled>false</bestOfferEnabled>
+<buyItNowAvailable>false</buyItNowAvailable>
+<startTime>2019-07-24T12:20:03.000Z</startTime>
+<endTime>2019-09-24T12:20:03.000Z</endTime>
+<listingType>FixedPrice</listingType>
+<gift>false</gift>
+<watchCount>168</watchCount>
+</listingInfo>
+<returnsAccepted>true</returnsAccepted>
+<condition>
+<conditionId>3000</conditionId>
+<conditionDisplayName>Used</conditionDisplayName>
+</condition>
+<isMultiVariationListing>true</isMultiVariationListing>
+<topRatedListing>true</topRatedListing>
+</item>
+<item>
+<itemId>401433628517</itemId>
+<title>Apple iPhone 7 128GB "Factory Unlocked" 4G LTE iOS WiFi Smartphone</title>
+<globalId>EBAY-US</globalId>
+<primaryCategory>
+<categoryId>9355</categoryId>
+<categoryName>Cell Phones &amp; Smartphones</categoryName>
+</primaryCategory>
+<galleryURL>https://thumbs2.ebaystatic.com/pict/401433628517404000000001_1.jpg</galleryURL>
+<viewItemURL>https://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10041&amp;campid=1234567890&amp;customid=k-man&amp;lgeo=1&amp;vectorid=229466&amp;item=401433628517</viewItemURL>
+<paymentMethod>PayPal</paymentMethod>
+<autoPay>true</autoPay>
+<postalCode>07014</postalCode>
+<location>Clifton,NJ,USA</location>
+<country>US</country>
+<shippingInfo>
+<shippingServiceCost currencyId="USD">0.0</shippingServiceCost>
+<shippingType>Free</shippingType>
+<shipToLocations>Worldwide</shipToLocations>
+<expeditedShipping>true</expeditedShipping>
+<oneDayShippingAvailable>false</oneDayShippingAvailable>
+<handlingTime>1</handlingTime>
+</shippingInfo>
+<sellingStatus>
+<currentPrice currencyId="USD">209.95</currentPrice>
+<convertedCurrentPrice currencyId="USD">209.95</convertedCurrentPrice>
+<sellingState>Active</sellingState>
+<timeLeft>P4DT15H46M47S</timeLeft>
+</sellingStatus>
+<listingInfo>
+<bestOfferEnabled>false</bestOfferEnabled>
+<buyItNowAvailable>false</buyItNowAvailable>
+<startTime>2017-10-31T11:44:33.000Z</startTime>
+<endTime>2019-08-31T11:44:33.000Z</endTime>
+<listingType>StoreInventory</listingType>
+<gift>false</gift>
+<watchCount>957</watchCount>
+</listingInfo>
+<returnsAccepted>true</returnsAccepted>
+<condition>
+<conditionId>2500</conditionId>
+<conditionDisplayName>Seller refurbished</conditionDisplayName>
+</condition>
+<isMultiVariationListing>true</isMultiVariationListing>
+<topRatedListing>true</topRatedListing>
+</item>
+<item>
+<itemId>113829665592</itemId>
+<title>Apple iPhone 6s - 16GB 32GB 64GB 128GB - Unlocked AT&amp;T Verizon T-Mobile Sprint</title>
+<globalId>EBAY-US</globalId>
+<primaryCategory>
+<categoryId>9355</categoryId>
+<categoryName>Cell Phones &amp; Smartphones</categoryName>
+</primaryCategory>
+<galleryURL>https://thumbs1.ebaystatic.com/pict/1138296655924040_1.jpg</galleryURL>
+<viewItemURL>https://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10041&amp;campid=1234567890&amp;customid=k-man&amp;lgeo=1&amp;vectorid=229466&amp;item=113829665592</viewItemURL>
+<paymentMethod>PayPal</paymentMethod>
+<autoPay>true</autoPay>
+<postalCode>32835</postalCode>
+<location>Orlando,FL,USA</location>
+<country>US</country>
+<shippingInfo>
+<shippingServiceCost currencyId="USD">8.99</shippingServiceCost>
+<shippingType>Flat</shippingType>
+<shipToLocations>Worldwide</shipToLocations>
+<expeditedShipping>true</expeditedShipping>
+<oneDayShippingAvailable>false</oneDayShippingAvailable>
+<handlingTime>1</handlingTime>
+</shippingInfo>
+<sellingStatus>
+<currentPrice currencyId="USD">127.0</currentPrice>
+<convertedCurrentPrice currencyId="USD">127.0</convertedCurrentPrice>
+<sellingState>Active</sellingState>
+<timeLeft>P28DT16H22M17S</timeLeft>
+</sellingStatus>
+<listingInfo>
+<bestOfferEnabled>false</bestOfferEnabled>
+<buyItNowAvailable>false</buyItNowAvailable>
+<startTime>2019-07-24T12:20:03.000Z</startTime>
+<endTime>2019-09-24T12:20:03.000Z</endTime>
+<listingType>FixedPrice</listingType>
+<gift>false</gift>
+<watchCount>5</watchCount>
+</listingInfo>
+<returnsAccepted>true</returnsAccepted>
+<condition>
+<conditionId>3000</conditionId>
+<conditionDisplayName>Used</conditionDisplayName>
+</condition>
+<isMultiVariationListing>true</isMultiVariationListing>
+<topRatedListing>true</topRatedListing>
+</item>
+<item>
+<itemId>382282567190</itemId>
+<title>Apple iPhone 7 128GB "Factory Unlocked" 4G LTE iOS WiFi Smartphone</title>
+<globalId>EBAY-US</globalId>
+<primaryCategory>
+<categoryId>9355</categoryId>
+<categoryName>Cell Phones &amp; Smartphones</categoryName>
+</primaryCategory>
+<galleryURL>https://thumbs1.ebaystatic.com/pict/04040_0.jpg</galleryURL>
+<viewItemURL>https://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10041&amp;campid=1234567890&amp;customid=k-man&amp;lgeo=1&amp;vectorid=229466&amp;item=382282567190</viewItemURL>
+<paymentMethod>PayPal</paymentMethod>
+<autoPay>true</autoPay>
+<postalCode>07014</postalCode>
+<location>Clifton,NJ,USA</location>
+<country>US</country>
+<shippingInfo>
+<shippingServiceCost currencyId="USD">0.0</shippingServiceCost>
+<shippingType>Free</shippingType>
+<shipToLocations>Worldwide</shipToLocations>
+<expeditedShipping>true</expeditedShipping>
+<oneDayShippingAvailable>false</oneDayShippingAvailable>
+<handlingTime>1</handlingTime>
+</shippingInfo>
+<sellingStatus>
+<currentPrice currencyId="USD">202.95</currentPrice>
+<convertedCurrentPrice currencyId="USD">202.95</convertedCurrentPrice>
+<sellingState>Active</sellingState>
+<timeLeft>P17DT23H44M44S</timeLeft>
+</sellingStatus>
+<listingInfo>
+<bestOfferEnabled>false</bestOfferEnabled>
+<buyItNowAvailable>false</buyItNowAvailable>
+<startTime>2017-11-13T19:42:30.000Z</startTime>
+<endTime>2019-09-13T19:42:30.000Z</endTime>
+<listingType>StoreInventory</listingType>
+<gift>false</gift>
+<watchCount>1272</watchCount>
+</listingInfo>
+<returnsAccepted>true</returnsAccepted>
+<condition>
+<conditionId>3000</conditionId>
+<conditionDisplayName>Used</conditionDisplayName>
+</condition>
+<isMultiVariationListing>true</isMultiVariationListing>
+<topRatedListing>true</topRatedListing>
+</item>
+<item>
+<itemId>113829665592</itemId>
+<title>Apple iPhone 6s - 16GB 32GB 64GB 128GB - Unlocked AT&amp;T Verizon T-Mobile Sprint</title>
+<globalId>EBAY-US</globalId>
+<primaryCategory>
+<categoryId>9355</categoryId>
+<categoryName>Cell Phones &amp; Smartphones</categoryName>
+</primaryCategory>
+<galleryURL>https://thumbs1.ebaystatic.com/pict/1138296655924040_1.jpg</galleryURL>
+<viewItemURL>https://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10041&amp;campid=1234567890&amp;customid=k-man&amp;lgeo=1&amp;vectorid=229466&amp;item=113829665592</viewItemURL>
+<paymentMethod>PayPal</paymentMethod>
+<autoPay>true</autoPay>
+<postalCode>32835</postalCode>
+<location>Orlando,FL,USA</location>
+<country>US</country>
+<shippingInfo>
+<shippingServiceCost currencyId="USD">8.99</shippingServiceCost>
+<shippingType>Flat</shippingType>
+<shipToLocations>Worldwide</shipToLocations>
+<expeditedShipping>true</expeditedShipping>
+<oneDayShippingAvailable>false</oneDayShippingAvailable>
+<handlingTime>1</handlingTime>
+</shippingInfo>
+<sellingStatus>
+<currentPrice currencyId="USD">127.0</currentPrice>
+<convertedCurrentPrice currencyId="USD">127.0</convertedCurrentPrice>
+<sellingState>Active</sellingState>
+<timeLeft>P28DT16H22M17S</timeLeft>
+</sellingStatus>
+<listingInfo>
+<bestOfferEnabled>false</bestOfferEnabled>
+<buyItNowAvailable>false</buyItNowAvailable>
+<startTime>2019-07-24T12:20:03.000Z</startTime>
+<endTime>2019-09-24T12:20:03.000Z</endTime>
+<listingType>FixedPrice</listingType>
+<gift>false</gift>
+<watchCount>8</watchCount>
+</listingInfo>
+<returnsAccepted>true</returnsAccepted>
+<condition>
+<conditionId>3000</conditionId>
+<conditionDisplayName>Used</conditionDisplayName>
+</condition>
+<isMultiVariationListing>true</isMultiVariationListing>
+<topRatedListing>true</topRatedListing>
+</item>
+</searchResult>
+<paginationOutput>
+<pageNumber>1</pageNumber>
+<entriesPerPage>100</entriesPerPage>
+<totalPages>269223</totalPages>
+<totalEntries>26922286</totalEntries>
+</paginationOutput>
+<itemSearchURL>https://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&amp;toolid=10041&amp;campid=1234567890&amp;customid=k-man&amp;lgeo=1&amp;mpre=http%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Diphone%26_ddo%3D1%26_ipg%3D100%26_pgn%3D1</itemSearchURL>
+</findItemsByKeywordsResponse>

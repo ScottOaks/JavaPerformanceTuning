@@ -1,0 +1,5 @@
+This is the implementation archive of various examples based on the stock
+price simulations.
+
+mvn package
+will build the stock-impl.jar

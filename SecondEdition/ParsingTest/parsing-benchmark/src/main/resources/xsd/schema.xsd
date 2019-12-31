@@ -1,0 +1,210 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.ebay.com/marketplace/search/v1/services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="categoryId" type="xs:short"/>
+  <xs:element name="categoryName" type="xs:string"/>
+  <xs:element name="shippingServiceCost">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:float">
+          <xs:attribute type="xs:string" name="currencyId" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="shippingType" type="xs:string"/>
+  <xs:element name="shipToLocations" type="xs:string"/>
+  <xs:element name="expeditedShipping" type="xs:string"/>
+  <xs:element name="oneDayShippingAvailable" type="xs:string"/>
+  <xs:element name="handlingTime" type="xs:byte"/>
+  <xs:element name="currentPrice">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:float">
+          <xs:attribute type="xs:string" name="currencyId" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="convertedCurrentPrice">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:float">
+          <xs:attribute type="xs:string" name="currencyId" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sellingState" type="xs:string"/>
+  <xs:element name="timeLeft" type="xs:duration"/>
+  <xs:element name="bestOfferEnabled" type="xs:string"/>
+  <xs:element name="buyItNowAvailable" type="xs:string"/>
+  <xs:element name="startTime" type="xs:dateTime"/>
+  <xs:element name="endTime" type="xs:dateTime"/>
+  <xs:element name="listingType" type="xs:string"/>
+  <xs:element name="gift" type="xs:string"/>
+  <xs:element name="watchCount" type="xs:short"/>
+  <xs:element name="conditionId" type="xs:short"/>
+  <xs:element name="conditionDisplayName" type="xs:string"/>
+  <xs:element name="originalRetailPrice">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:float">
+          <xs:attribute type="xs:string" name="currencyId" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pricingTreatment" type="xs:string"/>
+  <xs:element name="soldOnEbay" type="xs:string"/>
+  <xs:element name="soldOffEbay" type="xs:string"/>
+  <xs:element name="itemId" type="xs:long"/>
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="globalId" type="xs:string"/>
+  <xs:element name="subtitle" type="xs:string"/>
+  <xs:element name="primaryCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ser:categoryId" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:categoryName" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="galleryURL" type="xs:string"/>
+  <xs:element name="viewItemURL" type="xs:string"/>
+  <xs:element name="productId">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:int">
+          <xs:attribute type="xs:string" name="type"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="paymentMethod" type="xs:string"/>
+  <xs:element name="autoPay" type="xs:string"/>
+  <xs:element name="postalCode" type="xs:int"/>
+  <xs:element name="location" type="xs:string"/>
+  <xs:element name="country" type="xs:string"/>
+  <xs:element name="shippingInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ser:shippingServiceCost" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:shippingType" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:shipToLocations" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:expeditedShipping" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:oneDayShippingAvailable" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:handlingTime" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sellingStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ser:currentPrice" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:convertedCurrentPrice" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:sellingState" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:timeLeft" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listingInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ser:bestOfferEnabled" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:buyItNowAvailable" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:startTime" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:endTime" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:listingType" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:gift" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:watchCount" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="returnsAccepted" type="xs:string"/>
+  <xs:element name="galleryPlusPictureURL" type="xs:string"/>
+  <xs:element name="condition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ser:conditionId" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:conditionDisplayName" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isMultiVariationListing" type="xs:string"/>
+  <xs:element name="discountPriceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ser:originalRetailPrice" minOccurs="0" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:pricingTreatment" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:soldOnEbay" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:soldOffEbay" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="topRatedListing" type="xs:string"/>
+  <xs:element name="item">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ser:itemId" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:title" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:globalId" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:subtitle" minOccurs="0" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:primaryCategory" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:galleryURL" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:viewItemURL" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:productId" minOccurs="0" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:paymentMethod" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:autoPay" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:postalCode" minOccurs="0" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:location" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:country" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:shippingInfo" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:sellingStatus" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:listingInfo" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:returnsAccepted" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:galleryPlusPictureURL" minOccurs="0" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:condition" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:isMultiVariationListing" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:discountPriceInfo" minOccurs="0" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:topRatedListing" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pageNumber" type="xs:byte"/>
+  <xs:element name="entriesPerPage" type="xs:byte"/>
+  <xs:element name="totalPages" type="xs:int"/>
+  <xs:element name="totalEntries" type="xs:int"/>
+  <xs:element name="ack" type="xs:string"/>
+  <xs:element name="version" type="xs:string"/>
+  <xs:element name="timestamp" type="xs:dateTime"/>
+  <xs:element name="searchResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ser:item" maxOccurs="unbounded" minOccurs="0" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="count"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="paginationOutput">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ser:pageNumber" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:entriesPerPage" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:totalPages" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:totalEntries" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="itemSearchURL" type="xs:string"/>
+  <xs:element name="findItemsByKeywordsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ser:ack" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:version" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:timestamp" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:searchResult" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:paginationOutput" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+        <xs:element ref="ser:itemSearchURL" xmlns:ser="http://www.ebay.com/marketplace/search/v1/services"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

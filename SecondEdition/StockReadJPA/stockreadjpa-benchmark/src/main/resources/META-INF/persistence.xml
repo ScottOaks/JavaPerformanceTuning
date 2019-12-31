@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+  <persistence-unit name="StockPULazyLazy" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>net.sdo.stockimpl.StockOptionPriceLazyLazyImpl</class>
+    <class>net.sdo.stockimpl.StockPriceLazyLazyImpl</class>
+    <properties>
+      <property name="eclipselink.logging.level" value="INFO"/>
+      <property name="javax.persistence.jdbc.user" value="perf"/>
+      <property name="javax.persistence.jdbc.password" value="Welcome1"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/XEPDB1"/>
+    </properties>
+  </persistence-unit>
+
+  <persistence-unit name="StockPUEagerEager" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>net.sdo.stockimpl.StockOptionPriceEagerEagerImpl</class>
+    <class>net.sdo.stockimpl.StockPriceEagerEagerImpl</class>
+    <properties>
+      <property name="eclipselink.logging.level" value="INFO"/>
+      <property name="javax.persistence.jdbc.user" value="perf"/>
+      <property name="javax.persistence.jdbc.password" value="Welcome1"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/XEPDB1"/>
+    </properties>
+  </persistence-unit>
+
+  <persistence-unit name="StockPULazyEager" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>net.sdo.stockimpl.StockOptionPriceLazyEagerImpl</class>
+    <class>net.sdo.stockimpl.StockPriceLazyEagerImpl</class>
+    <properties>
+      <property name="eclipselink.logging.level" value="INFO"/>
+      <property name="javax.persistence.jdbc.user" value="perf"/>
+      <property name="javax.persistence.jdbc.password" value="Welcome1"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/XEPDB1"/>
+    </properties>
+  </persistence-unit>
+
+  <persistence-unit name="StockPUEagerLazy" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>net.sdo.stockimpl.StockOptionPriceEagerLazyImpl</class>
+    <class>net.sdo.stockimpl.StockPriceEagerLazyImpl</class>
+    <properties>
+      <property name="eclipselink.logging.level" value="INFO"/>
+      <property name="javax.persistence.jdbc.user" value="perf"/>
+      <property name="javax.persistence.jdbc.password" value="Welcome1"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/XEPDB1"/>
+    </properties>
+  </persistence-unit>
+
+  <persistence-unit name="StockPULazyQuery" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>net.sdo.stockimpl.StockOptionPriceEagerLazyQueryCacheImpl</class>
+    <class>net.sdo.stockimpl.StockPriceEagerLazyQueryCacheImpl</class>
+    <properties>
+      <property name="eclipselink.logging.level" value="INFO"/>
+      <property name="javax.persistence.jdbc.user" value="perf"/>
+      <property name="javax.persistence.jdbc.password" value="Welcome1"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/XEPDB1"/>
+    </properties>
+  </persistence-unit>
+
+</persistence>
