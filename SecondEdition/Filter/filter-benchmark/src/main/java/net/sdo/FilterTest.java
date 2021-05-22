@@ -32,7 +32,9 @@
 package net.sdo;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 import org.openjdk.jmh.annotations.Benchmark;
@@ -107,11 +109,10 @@ public class FilterTest {
 	bh.consume(count);
     }
 
-    private ArrayList<String> calcArray(ArrayList<String> src,
-                                               int c, char target) {
+    private ArrayList<String> calcArray(List<String> src, Predicate<String> p) {
         ArrayList<String> dst = new ArrayList<>();
         for (String s : src) {
-            if (s.charAt(c) != target)
+            if (p.test(s))
                 dst.add(s);
         }
         return dst;
@@ -119,10 +120,10 @@ public class FilterTest {
 
     @Benchmark
     public void calcEager(Blackhole bh) {
-        ArrayList<String> al1 = calcArray(al, 0, 'A');
-        ArrayList<String> al2 = calcArray(al1, 1, 'A');
-        ArrayList<String> al3 = calcArray(al2, 2, 'A');
-        ArrayList<String> al4 = calcArray(al3, 3, 'A');
+        ArrayList<String> al1 = calcArray(al, (s) -> s.charAt(0) != 'A');
+        ArrayList<String> al2 = calcArray(al1, (s) -> s.charAt(1) != 'A');
+        ArrayList<String> al3 = calcArray(al2, (s) -> s.charAt(2) != 'A');
+        ArrayList<String> al4 = calcArray(al3, (s) -> s.charAt(3) != 'A');
         String answer = al4.get(0);
 	bh.consume(answer);
     }
